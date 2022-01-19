@@ -6,7 +6,7 @@ let allData = [];
 let num = 0;
 let img = "";
 
-fetch("../data.json")
+fetch("https://achrafedd.github.io/Space-Tourism/data.json")
   .then((res) => res.json())
   .then((data) => {
     for (let i = 0; i < data.technology.length; i++) {
