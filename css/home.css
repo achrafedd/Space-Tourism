@@ -1,0 +1,105 @@
+/* Start Landing */
+.landing {
+  background-image: url(../assets/home/background-home-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding-top: calc(136px + 76px);
+}
+.landing .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: var(--main-padding-bottom);
+}
+.landing .container .content {
+  width: 382px;
+}
+.landing .container h1 {
+  font-size: 28px;
+  font-family: var(--main-font);
+  color: var(--secend-color);
+  font-weight: 400;
+  letter-spacing: 4.72px;
+}
+.landing .container h1 span {
+  font-family: var(--secend-font);
+  font-size: 150px;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 24px 0;
+  letter-spacing: 0;
+}
+.landing .container p {
+  font-size: 18px;
+  color: var(--secend-color);
+  font-family: var(--main-font);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+.landing .container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 274px;
+  height: 274px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-family: var(--secend-font);
+  font-size: 32px;
+  position: relative;
+  color: var(--main-color);
+  z-index: 5;
+  margin-bottom: 65px;
+}
+.landing .container a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0px;
+  width: 0px;
+  z-index: 3;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s linear;
+}
+.landing .container a:hover::before {
+  height: 450px;
+  width: 450px;
+}
+/* Tablet Divice */
+@media (max-width: 768px) {
+  .landing {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+  .landing .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing .container h1 {
+    text-align: center;
+  }
+  .landing .container p {
+    margin-bottom: 156px;
+  }
+}
+/* Phone Divice */
+@media (max-width: 576px) {
+  .landing {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+  }
+  .landing .container .content {
+    width: 327px;
+  }
+  .landing .container h1 span {
+    font-size: 80px;
+  }
+  .landing .container p {
+    font-size: 15px;
+  }
+}
+/* End Landing */

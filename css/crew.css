@@ -1,0 +1,119 @@
+/* Start Crew */
+.crew {
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding-top: calc(136px + 76px);
+}
+.crew .container {
+  position: relative;
+}
+.crew .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.crew .content .role {
+  margin-top: 154px;
+  font-family: var(--secend-font);
+  color: #fff;
+  font-weight: normal;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.crew .content .name {
+  font-family: var(--secend-font);
+  color: #fff;
+  font-size: 56px;
+  text-transform: uppercase;
+  margin-bottom: 27px;
+}
+.crew .content .bio {
+  font-family: var(--main-font);
+  color: var(--secend-color);
+  line-height: 32px;
+  margin-bottom: 100px;
+  width: 488px;
+}
+.crew .content img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.crew .dots {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.crew .dots .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #36373f;
+  cursor: pointer;
+}
+.crew .dots .dot:hover {
+  background-color: #292c34;
+}
+.crew .dots .dot.active {
+  background-color: #fff;
+}
+@media (max-width: 1100px) {
+  .crew .content img {
+    position: initial;
+    margin-bottom: 32px;
+    width: 327px;
+  }
+}
+@media (max-width: 768px) {
+  .crew {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+  .crew .content {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .crew .info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .crew .dots .dot {
+    background-color: #19191a;
+  }
+}
+@media (max-width: 576px) {
+  .crew {
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+  }
+  .crew .content img {
+    margin-bottom: 32px;
+    width: 327px;
+  }
+  .crew .content {
+    justify-content: center;
+  }
+  .crew .info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .crew .info .role {
+    font-size: 16px;
+  }
+  .crew .info .name {
+    font-size: 24px;
+  }
+  .crew .info .bio {
+    font-size: 15px;
+    width: 327px;
+  }
+  .crew .dots .dot {
+    background-color: #19191a;
+  }
+}
+/* End Crew */

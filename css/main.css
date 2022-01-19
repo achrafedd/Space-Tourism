@@ -1,0 +1,219 @@
+/* Start Main Rules */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+:root {
+  --main-color: #0b0d17;
+  --secend-color: #d2d8f9;
+  --hover-color: #85868b;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --main-font: "Barlow Condensed", sans-serif;
+  --secend-font: "Bellefair", serifs;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+section {
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body {
+  overflow-x: hidden;
+  font-weight: 400;
+}
+.main-title {
+  color: #fff;
+  font-size: 28px;
+  font-family: var(--main-font);
+  font-weight: 400;
+  letter-spacing: 4.72px;
+  margin-bottom: 64px;
+}
+.main-title b {
+  margin-right: 28px;
+  color: #979797;
+}
+@media (max-width: 576px) {
+  .main-title {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* Small devices */
+@media (min-width: 576px) {
+  .container {
+    width: 560px;
+  }
+}
+/* Medium devices */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Extra large devices */
+@media (min-width: 1200px) {
+  .container {
+    width: 1190px;
+  }
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* End Main Rules */
+/* Start Header */
+header {
+  height: 96px;
+  margin: 40px 0 0;
+  position: relative;
+  z-index: 9999;
+}
+header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+}
+header .logo {
+  width: 48px;
+  height: 48px;
+}
+header .line {
+  width: 473px;
+  height: 1px;
+  background-color: #fff;
+}
+header .open-menu,
+header .close-menu {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  gap: 48px;
+  height: 96px;
+}
+header nav ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+header ul li::before {
+  content: "";
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s linear;
+}
+header ul li:hover::before {
+  background-color: var(--hover-color);
+  width: 100%;
+}
+header ul li.active::before {
+  width: 100%;
+  background-color: #fff;
+}
+header ul li a {
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: #fff;
+}
+header ul li a b {
+  margin-right: 11px;
+}
+header .blure_back {
+  width: 830px;
+  height: 96px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 1100px) {
+  header .line {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    margin: 0;
+  }
+  header ul li a b {
+    display: none;
+  }
+  header .blure_back {
+    width: 450px;
+  }
+}
+@media (max-width: 576px) {
+  header nav {
+    height: 100vh;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.3s linear;
+    pointer-events: none;
+  }
+  header nav .close-menu {
+    display: block;
+    width: 19.9px;
+    margin-top: 34px;
+    margin-bottom: 65px;
+    margin-right: 26.5px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  header .open-menu {
+    display: block;
+    cursor: pointer;
+  }
+  header nav.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  header nav ul {
+    flex-direction: column;
+    height: 100%;
+  }
+  header nav ul li {
+    height: 19px;
+  }
+  header ul li::before {
+    height: 100%;
+    width: 3px;
+  }
+  header ul li.active::before {
+    height: 100%;
+    width: 5px;
+  }
+  header ul li a b {
+    display: inline;
+    margin-left: 32px;
+  }
+  header .blure_back {
+    display: none;
+  }
+}
+/* End Header */
